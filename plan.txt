@@ -1,0 +1,38 @@
+func New(s string) *StringList
+Создает новый StringList из обычной строки Go.
+
+func (s *StringList) Len() int
+Возвращает длину строки.
+
+func (s *StringList) Append(c rune)
+Добавляет символ в конец строки.
+
+func (s *StringList) Prepend(c rune)
+Добавляет символ в начало строки.
+
+func (s *StringList) Insert(c rune, index int) error
+Вставляет символ на определенную позицию в строке.
+
+func (s *StringList) Remove(index int) error
+Удаляет символ из строки по индексу.
+
+func (s *StringList) String() string
+Возвращает строковое представление списка.
+
+func (s *StringList) At(index int) (rune, error)
+Получает символ по индексу.
+
+func (s *StringList) Concat(other *StringList) *StringList
+Конкатенирует две строки.
+
+func (s *StringList) Equals(other *StringList) bool
+Проверяет, равны ли две строки.
+
+func (s *StringList) IndexOf(c rune) int
+Возвращает первый индекс указанного символа в строке.
+
+func (s *StringList) Substring(start, end int) (*StringList, error)
+Возвращает подстроку из строки.
+
+func (s *StringList) Replace(old, new rune, n int) *StringList
+Заменяет символы в строке.
